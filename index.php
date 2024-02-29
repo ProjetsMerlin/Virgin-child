@@ -1,17 +1,4 @@
 <?php
-/*
-FIELDS
-    What-> id,title,slug, HOW-> link, WHERE-> categories,tags,status,type, WHEN-> date, WHY-> excerpt,content, WHO-> author
-    MORE-> comments ( HOW MUCH )
-
-PAGINATION
-    page, per_page, order, orderby
-    
-FILTER
-    exemple : &cat=actus&tag=ia
-    https://developer.wordpress.org/rest-api/reference/
-*/
-
 $slug_projet = site_url() . "/wp-json/wp/v2";
 $fields = "?_fields=id,title,name,slug,link,categories,tags,status,type,date_gmt,excerpt,content,author,custom_details,featured_media";
 $pagination = "&page=1&per_page=12&offset=0&orderby=date&order=desc";
@@ -42,3 +29,16 @@ else {
 }
 
 wp_redirect($url_final);
+
+/*
+FIELDS
+    What-> id,title,slug, HOW-> link, WHERE-> categories,tags,status,type, WHEN-> date, WHY-> excerpt,content, WHO-> author
+    MORE-> comments ( HOW MUCH )
+
+PAGINATION
+    page, per_page, order, orderby
+    
+FILTER
+    exemple : &cat=non-classe&tag=ia
+    https://developer.wordpress.org/rest-api/reference/
+*/
