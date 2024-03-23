@@ -32,7 +32,7 @@ wp_redirect($url_final);
 
 /*
 FIELDS
-    What-> id,title,slug, HOW-> link, WHERE-> categories,tags,status,type, WHEN-> date, WHY-> excerpt,content, WHO-> author
+    What-> id,title,slug, HOW-> link, WHERE-> categories,tags,status,type, WHEN-> date WHY-> excerpt,content, WHO-> author
     MORE-> comments ( HOW MUCH )
 
 PAGINATION
