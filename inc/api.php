@@ -31,8 +31,8 @@ function virgin_child_api() {
             $categories_name = null;
         }
         
-        if($post_arr['tags']) {
-            $tags_name = array();
+        $tags_name = array();
+        if(get_the_terms($post_arr['id'], 'post_tag')) {
             foreach ($post_arr['tags'] as $key => $value) {
                 $tags_name[] = get_the_terms($post_arr['id'], 'post_tag')[$key]->name;
             }
